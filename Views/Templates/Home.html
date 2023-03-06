@@ -1,0 +1,18 @@
+
+<div class="container">
+    $if session["user"] == None:
+        <h1>You are not logged in</h1>
+    $else:
+        <h1>Hello $session["user"]["username"]</h1>
+        <br />
+        <div class="post-box" >
+            <form id="post-activity">
+               <div class="form-outline">
+                  <textarea class="form-control" name="content" id="textAreaExample" rows="4"></textarea>
+                  <label class="form-label" for="textAreaExample">Message</label>
+               </div>
+                <button id="post-button" class="btn btn-primary btn-block" type="submit">Post</button>
+            </form>
+        </div>
+
+</div>

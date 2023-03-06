@@ -1,0 +1,22 @@
+$def with (posts, email)
+
+<h1>Change Password</h1>
+<br />
+<form id="update-profile-form">
+  <div class="form-outline mb-4">
+    <input type="email" name="email" id="email" class="form-control" value="$email" />
+    <label class="form-label" for="email">Email address</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Update</button>
+</form>
+
+$for post in posts:
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">$post["username"]</h5>
+      <span class="timestamp">$post["timestamp"]</span>
+      <p class="card-text">$post["content"]</p>
+      <button type="button" class="btn btn-primary">Button</button>
+    </div>
+  </div>
